@@ -10,8 +10,6 @@ class Transaction extends Model
 
     public $timestamps = false;
 
-    const CREATED_AT = 'date';
-
     protected $fillable = [
         'user_id', 'amount', 'type'
     ];
