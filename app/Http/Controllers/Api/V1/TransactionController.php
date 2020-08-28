@@ -5,13 +5,13 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Requests\CreateTransactionRequest;
 use App\Http\Requests\GetTransactionsByDateRequest;
 use App\Services\Contracts\TransactionServiceContract;
-use App\User;
+use App\Transaction;
 
 class TransactionController extends ApiController
 {
     private $transactionServiceContract;
 
-    public function __construct(User $model, TransactionServiceContract $transactionServiceContract)
+    public function __construct(Transaction $model, TransactionServiceContract $transactionServiceContract)
     {
         $this->transactionServiceContract = $transactionServiceContract;
         $this->model = $model;
