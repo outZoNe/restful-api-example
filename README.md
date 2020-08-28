@@ -1,4 +1,5 @@
 # Deploy
+0) Склонируйте репозиторий и настройте `laravel/valet` или `homestead`
 1) `composer install`
 2) `cp .env.example .env` и настроить `.env` (логин, пароль и имя БД)
 3) `php artisan migrate`
