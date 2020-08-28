@@ -2,20 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class GetTransactionsByDateRequest extends FormRequest
+class GetTransactionsByDateRequest extends ApiRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
-    {
-        return false;
-    }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,7 +12,15 @@ class GetTransactionsByDateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'date' => 'required|date_format:Y-m-d'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'date.required' => 'Field date is required!',
+            'date.date_format' => 'Field date should have format: Y-m-d!',
         ];
     }
 }
