@@ -35,7 +35,7 @@
 
 ### Создать транзакцию
 
-Отправлять на: `http://{doman}/api/get-user-transactions`
+Отправлять на: `http://{doman}/api/create-transaction`
 ```json
 {
     "user_id": 1,

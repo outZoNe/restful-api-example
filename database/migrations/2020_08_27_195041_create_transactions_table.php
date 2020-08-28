@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->bigInteger('amount');
+            $table->bigInteger('amount'); // судя по ТЗ тут должны быть целые числа.
             $table->enum('type', ['income', 'expense']);
             $table->timestamp('date');
         });

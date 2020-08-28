@@ -27,7 +27,7 @@ class CreateUserRequest extends ApiRequest
             'currency.required' => 'Field currency is required!',
             'currency.min' => 'Field currency length min is 3 symbols!',
             'currency.max' => 'Field currency length max is 3 symbols!',
-            'currency.in' => 'Field currency must be in: AUD,GBP,BYR,DKK,USD,EUR,ISK,KZT,RUB!',
+            'currency.in' => 'Incorrect currency code',
         ];
     }
 }
