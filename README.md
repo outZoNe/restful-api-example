@@ -12,7 +12,7 @@
 
 ### Создать пользователя
 
-Отправлять на: `http://{doman}/api/create-user`
+Отправлять на: `http://{doman}/api/create/user`
 ```json
 {
     "nickname": "roman",
@@ -24,7 +24,7 @@
 
 ### Получить танзакции пользователя (по 10 на страницу, сортировка по дате: `ASC` или `DESC`)
 
-Отправлять на: `http://{doman}/api/get-user-transactions`
+Отправлять на: `http://{doman}/api/get-transactions/user`
 ```json
 {
     "user_id": 1,
@@ -35,7 +35,7 @@
 
 ### Создать транзакцию
 
-Отправлять на: `http://{doman}/api/create-transaction`
+Отправлять на: `http://{doman}/api/create/transaction`
 ```json
 {
     "user_id": 1,
@@ -49,7 +49,7 @@
 
 ### Получение всех транзакций за определенную дату
 
-Отправлять на: `http://{doman}/api/get-transactions-by-date`
+Отправлять на: `http://{doman}/api/get-transactions/date`
 
 ```json
 {
