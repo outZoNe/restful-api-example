@@ -3,7 +3,7 @@
 2) `cp .env.example .env` и настроить `.env` (логин, пароль и имя БД)
 3) `php artisan migrate`
 4) `php artisan db:seed` - чтобы сгенерировать рандомных юзеров и их транзакции
-5) `php artisan parse:exchange_rate` - artisan команда для парсинга валюты. Так же предполагается, что каждый день в полночь, через schedule автоматически парсится курс валюты на сутки. Если дело дойдет до продакшена, то незабываем поставить крон: `* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1`
+5) `php artisan parse:exchange_rate` - artisan команда для парсинга валюты. Предполагается, что каждый день в полночь по крону парсится курс валют
 6) `php artisan test`
 
 # JSON for postman request
