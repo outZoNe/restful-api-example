@@ -12,8 +12,8 @@ Route::prefix('create')->group(function () {
 
 Route::prefix('get-transactions')->group(function () {
     // получаение всех транзакций пользователя
-    Route::get('user', 'Api\V1\UserController@create');
+    Route::get('user', 'Api\V1\UserController@get');
 
     // получение транзакций всех пользователей за определенную дату
-    Route::get('date', 'Api\V1\TransactionController@create');
+    Route::get('date', 'Api\V1\TransactionController@get');
 });

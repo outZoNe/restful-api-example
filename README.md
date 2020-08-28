@@ -24,14 +24,14 @@
 
 ### Получить танзакции пользователя (по 10 на страницу, сортировка по дате: `ASC` или `DESC`)
 
-Отправлять на: `http://{doman}/api/get-transactions/user`
+Отправлять на: `http://{doman}/api/get-transactions/user?page=1`
 ```json
 {
     "user_id": 1,
-    "page": 1,
     "sort_by_date": "ASC"
 }
 ```
+`page` - это номер страницы с данными. Максимум 10 на страницу
 
 ### Создать транзакцию
 

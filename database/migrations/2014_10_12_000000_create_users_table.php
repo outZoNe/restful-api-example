@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('nickname')->unique()->index(); // попросим БД содать индекс для этого поля, вдруг нам в будущем захочется сделать поиск по nickname
-            $table->enum('currency', ['AUD', 'GBP', 'BYR', 'DKK', 'USD', 'EUR', 'ISK', 'KZT', 'RUB']);
+            $table->enum('currency', ['AUD', 'GBP', 'DKK', 'USD', 'EUR', 'KZT', 'RUB']);
         });
     }
 

@@ -12,7 +12,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $currency = ['AUD', 'GBP', 'BYR', 'DKK', 'USD', 'EUR', 'ISK', 'KZT', 'RUB'];
+        $currency = ['AUD', 'GBP', 'DKK', 'USD', 'EUR', 'KZT', 'RUB'];
         $faker = Faker\Factory::create();
 
         foreach (range(1, 50) as $el) {

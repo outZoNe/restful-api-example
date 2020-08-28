@@ -13,7 +13,7 @@ class CreateTransactionRequest extends ApiRequest
     {
         return [
             'user_id' => 'required|integer|exists:users,id',
-            'amount' => 'required|integer',
+            'amount' => 'required|integer|min:1',
             'type' => 'required|in:income,expense',
             'date' => 'required|date_format:Y-m-d H:i:s'
         ];
@@ -27,6 +27,7 @@ class CreateTransactionRequest extends ApiRequest
             'user_id.exists' => 'User with this id does not exist!',
             'amount.required' => 'Field amount is required!',
             'amount.integer' => 'Field should be integer!',
+            'amount.min' => 'Field should be minimal 1!',
             'type.required' => 'Field type is required!',
             'type.in' => 'Field type must be in: income or expense!',
             'date.required' => 'Field type is required!',

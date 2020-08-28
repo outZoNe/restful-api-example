@@ -18,7 +18,7 @@ class TransactionSeeder extends Seeder
         $faker = Faker\Factory::create();
 
         foreach (User::all() as $user) {
-            foreach (range(1, mt_rand(1, 10)) as $el) {
+            foreach (range(1, mt_rand(10, 30)) as $el) {
                 Transaction::create([
                     'user_id' => $user->id,
                     'amount' => mt_rand(0, 500000),
